@@ -1,7 +1,7 @@
 package com.rcintra.samsung.domain;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -15,9 +15,14 @@ public class DocumentDTO {
 	private String notaFiscal;
 
 	@JsonFormat(pattern="yyyy-MM-dd")
-	private Date documentDate;
+	private LocalDate documentDate;
 	
 	private BigDecimal documentValue;
 	private String currencyCode;
+	
+	private String currencyDesc;
+	private BigDecimal documentValueUSD;
+	private BigDecimal documentValuePEN;
+	private BigDecimal documentValueBRL;
 	
 }
